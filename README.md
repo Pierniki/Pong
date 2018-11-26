@@ -1,1 +1,1 @@
-# PPong
+# Classic Pong game.
