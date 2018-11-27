@@ -264,15 +264,13 @@ namespace PPong
                 //GOING DOWN
                 if (enemyBar.Position.Y > ballMovementHandler.EstLanding && enemyBar.Position.Y > Scaler.GetScaledHeight(enemyBar.Texture, enemyBar.Scale) / 2)
                 {
-                    enemyBar.Position = enemyBar.Position - new Vector2(0, movementSpeed);
-                    enemyBar.UpdateRect();
+                    enemyBar.Position = enemyBar.Position - new Vector2(0, movementSpeed);     
                 }
 
                 //GOING UP
                 if (enemyBar.Position.Y < ballMovementHandler.EstLanding && enemyBar.Position.Y < Scaler.getWindowHeight() - Scaler.GetScaledHeight(enemyBar.Texture, enemyBar.Scale) / 2)
                 {
                     enemyBar.Position = enemyBar.Position + new Vector2(0, movementSpeed);
-                    enemyBar.UpdateRect();
                 }
             }
             //CATCH
@@ -282,16 +280,16 @@ namespace PPong
                 if (ball.Position.Y < enemyBar.Position.Y && enemyBar.Position.Y > Scaler.GetScaledHeight(enemyBar.Texture, enemyBar.Scale) / 2)
                 {
                     enemyBar.Position = enemyBar.Position - new Vector2(0, movementSpeed);
-                    enemyBar.UpdateRect();
                 }
 
                 //GOING DOWN
                 if (ball.Position.Y > enemyBar.Position.Y && enemyBar.Position.Y < Scaler.getWindowHeight() - Scaler.GetScaledHeight(enemyBar.Texture, enemyBar.Scale) / 2)
                 {
                     enemyBar.Position = enemyBar.Position + new Vector2(0, movementSpeed);
-                    enemyBar.UpdateRect();
                 }
             }
+
+            enemyBar.UpdateRect();
         }
     }
 
